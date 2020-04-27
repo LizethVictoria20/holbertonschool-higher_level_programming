@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 -m main $PYFILE
+python3 -m my_main $PYFILE
 cp __pycache__/*.pyc $PYFILE"c"
