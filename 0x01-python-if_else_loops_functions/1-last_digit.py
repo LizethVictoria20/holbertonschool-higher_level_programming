@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 last = "Last digit of "
-less = "and is less than 6 and not 0"
+less = " and is less than 6 and not 0"
 if number < 0:
     lastNum = number % -10
 
