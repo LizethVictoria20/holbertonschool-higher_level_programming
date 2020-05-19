@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""0-square.py: Python script that creates a Square Class"""
+'''1-square.py: Python script that defines square,
+   private instantiation attribute of size'''
 
 
 class Square:
+    '''Creates an empty Square type'''
     def __init__(self, size):
-        """Init method to Square class."""
+        '''Initializes Square with size'''
         self.__size = size
