@@ -6,16 +6,17 @@ class Square:
     '''Creates class Square type'''
 
     def __init__(self, size=0):
-
+        '''Initializes Square with size'''
         self.__size = size
 
     @property
     def size(self):
+        '''Define the method to give name'''
         return self.__size
 
     @size.setter
     def size(self, value):
-        '''Initializes Square with size in zero'''
+        '''Access to name and value'''
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
