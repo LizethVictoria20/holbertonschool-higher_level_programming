@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''102.squeare.py: Compare 2 squares'''
+
+
 class Square:
     def __init__(self, size=0):
         '''Initializes Square with size and position'''
