@@ -3,6 +3,7 @@
 
 
 class Square:
+    '''Creates an empty Square type'''
     def __init__(self, size=0):
         '''Initializes Square with size and position'''
         self.__size = size
