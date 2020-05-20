@@ -27,24 +27,24 @@ class Square:
 
     def __lt__(self, other):
         '''Comparation'''
-        return(self.area() < other.area())
+        return (self.area() < other.area())
 
     def __eq__(self, other):
         '''Comparation'''
-        return(self.area() == other.area())
+        return (self.area() == other.area())
 
     def __ne__(self, other):
         '''Comparation'''
-        return(self.area() != other.area())
+        return (self.area() != other.area())
 
     def __gt__(self, other):
         '''Comparation'''
-        return(self.area() > other.area())
+        return (self.area() > other.area())
 
     def __le__(self, other):
         '''Comparation'''
-        return(self.area() <= other.area())
+        return (self.area() <= other.area())
 
     def __ge__(self, other):
         '''Comparation'''
-        return(self.area() >= other.area())
+        return (self.area() >= other.area())
