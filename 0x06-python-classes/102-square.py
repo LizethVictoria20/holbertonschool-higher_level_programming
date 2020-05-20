@@ -5,7 +5,7 @@
 class Square:
     def __init__(self, size=0):
         '''Initializes Square with size and position'''
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -15,10 +15,10 @@ class Square:
     @size.setter
     def size(self, value):
         '''Access to name and value'''
-        if type(value) is not int:
+        if type(value) is not int and type(value) is not float:
             raise TypeError("size must be a number")
         if value < 0:
-            raise TypeError("size must be >= 0")
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
