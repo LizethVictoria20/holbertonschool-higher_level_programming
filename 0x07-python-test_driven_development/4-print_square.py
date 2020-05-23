@@ -17,4 +17,4 @@ def print_square(size):
     else:
         for i in range(size):
             mul = '#' * size
-            print(mul)
+            print("{}".format(mul))
