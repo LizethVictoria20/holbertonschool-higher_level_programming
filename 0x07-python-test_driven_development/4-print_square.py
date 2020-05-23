@@ -16,5 +16,4 @@ def print_square(size):
         raise ValueError("size must be >= 0")
     else:
         for i in range(size):
-            mul = '#' * size
-            print("{}".format(mul))
+            print("#" * size)
