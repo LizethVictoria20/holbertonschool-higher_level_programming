@@ -1,0 +1,115 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add between a and b``
+-------------------
+
+This is an exercise where we have add two integer.  First import
+``0-add_integer`` from the ``add_integer`` module:
+
+-------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+#Add two integers
+>>> add_integer(2, 7)
+9
+
+
+#Add one float and one int
+>>> add_integer(2.4, 5)
+7
+
+
+#Add one int and one float
+>>> add_integer(5, 2.4)
+7
+
+
+#Add one int and one string
+>>> add_integer(2, 'boom')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+#Add one boolean and one integer
+>>> add_integer(2, True)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+#Add one boolean and one string
+>>> add_integer(True, "Holis baby")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+#Add an integer and a empty 
+>>> add_integer(8, {})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+#Add a value None
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+#Add infinity value
+>>> add_integer(9999e9999)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+#Add three values
+>>> add_integer(12, 4, 8)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+
+#Add fload, string and integer
+>>> add_integer(float("hello"), 3)
+Traceback (most recent call last):
+...
+ValueError: could not convert string to float: 'hello'
+
+#Add float, string and integer
+>>> add_integer(float('nan'), 3)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+
+#Add two boolean
+>>> add_integer(True, True)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+#Add boolean and integer
+>>> add_integer(True, 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+#Add value empty
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+>>> add_integer(a=a)
+Traceback (most recent call last):
+...
+NameError: name 'a' is not defined
+
+
+>>> add_integer(a=10)
+108
+
