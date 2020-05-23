@@ -4,10 +4,16 @@
 
 
 def print_square(size):
-    """Print square
-    Arguments:
-        size {[int]} --  is the size length of the square
-    """
+    '''[print_square]
+
+    Args:
+        size ([size]): [Length size]
+
+    Raises:
+        TypeError: [size must be an integer]
+        TypeError: [size must be an integer]
+        ValueError: [size must be >= 0]
+    '''
     if type(size) is not int:
         raise TypeError("size must be an integer")
     if type(size) is float and size < 0:
