@@ -9,12 +9,14 @@ def matrix_divided(matrix, div):
         matrix {[matrix]} -- [description]
         div {[Div number]} -- [Number to multipli]
     """
+    longMatrix = "matrix must be a matrix (list of lists) of integers/floats"
+
     list1 = []
     if type(matrix) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(longMatrix)
     for i in matrix:
         if type(i) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(longMatrix)
         if len(matrix[0]) != len(i):
             raise TypeError("Each row of the matrix must have the same size")
     if div == 0:
@@ -22,7 +24,7 @@ def matrix_divided(matrix, div):
     for i in matrix:
         for j in i:
             if type(j) is not int and type(j) is not float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(longMatrix)
     for m in matrix:
         new_list = []
         if type(div) is not int and type(div) is not float:
