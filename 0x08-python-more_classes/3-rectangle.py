@@ -41,7 +41,7 @@ class Rectangle:
 
         if type(value) is not int:
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
 
     @property
@@ -62,7 +62,7 @@ class Rectangle:
 
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
 
     def area(self):
@@ -75,5 +75,4 @@ class Rectangle:
         '''
         if self.__width != 0 or self.__height != 0:
             return 2 * (self.__width + self.__height)
-        else:
-            return 0
+        return 0
