@@ -17,9 +17,10 @@ class Rectangle:
             [self]: [description]
         '''
         if self.__width != 0 or self.__height != 0:
-            for i in range(self.__height - 1):
-                print("#" * self.__width)
-            return ("#" * self.__width)
+            for i in range(self.__height):
+                for j in range(self.__height - 1):
+                    print("#" * self.__width)
+                return ("#" * self.__width)
         else:
             return ""
 
