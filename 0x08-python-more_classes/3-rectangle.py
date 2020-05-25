@@ -7,8 +7,13 @@ class Rectangle:
     '''[defines a rectangle]
     '''
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        '''[__init__]
+        Args:
+            width (int, optional): [Ancho]. Defaults to 0.
+            height (int, optional): [Alto]. Defaults to 0.
+        '''        
+        self.width = width
+        self.height = height
 
     def __str__(self):
         '''[print __str__]
