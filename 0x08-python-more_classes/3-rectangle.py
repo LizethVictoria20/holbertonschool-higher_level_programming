@@ -11,7 +11,7 @@ class Rectangle:
         Args:
             width (int, optional): [Ancho]. Defaults to 0.
             height (int, optional): [Alto]. Defaults to 0.
-        '''        
+        '''
         self.width = width
         self.height = height
 
@@ -21,7 +21,7 @@ class Rectangle:
         Returns:
             [self]: [description]
         '''
-        if self.__width != 0 or self.__height != 0:
+        if self.__width != 0 and self.__height != 0:
             for j in range(self.__height - 1):
                 print("#" * self.__width)
             return ("#" * self.__width)
@@ -73,12 +73,12 @@ class Rectangle:
     def area(self):
         '''[area rectangle]
         '''
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
         '''[perimeter]
         '''
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
         else:
-            return 2 * (self.__width + self.__height)
+            return 2 * (self.width + self.height)
