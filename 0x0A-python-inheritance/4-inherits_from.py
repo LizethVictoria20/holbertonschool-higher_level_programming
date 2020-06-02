@@ -10,7 +10,7 @@ def inherits_from(obj, a_class):
         obj ([int]): [description]
         a_class ([obj]): [description]
     '''
-    if not issubclass(a_class, type(obj)):
-        return True
-    else:
+    if issubclass(a_class, type(obj)):
         return False
+    else:
+        return True
