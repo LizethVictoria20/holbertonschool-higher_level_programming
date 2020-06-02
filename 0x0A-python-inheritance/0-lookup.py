@@ -8,4 +8,4 @@ def lookup(obj):
     Args:
         obj ([str]): [list object]
     '''
-    print(dir(obj))
+    return (dir(obj))
