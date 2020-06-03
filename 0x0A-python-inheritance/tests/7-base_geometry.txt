@@ -49,13 +49,6 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 
 
 >>> bg = BaseGeometry()
->>> bg.integer_validator(True, False)
-Traceback (most recent call last):
-...
-TypeError: True must be an integer
-
-
->>> bg = BaseGeometry()
 >>> bg.integer_validator("holis", -1)
 Traceback (most recent call last):
 ...
@@ -67,3 +60,31 @@ ValueError: holis must be greater than 0
 Traceback (most recent call last):
 ...
 TypeError: holis must be an integer
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(2.3)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator([1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator({2 , 3, 4}, {1, 2, 4})
+Traceback (most recent call last):
+...
+TypeError: {2, 3, 4} must be an integer
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(__dict__)
+Traceback (most recent call last):
+...
+NameError: name '__dict__' is not defined
