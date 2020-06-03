@@ -10,4 +10,5 @@ def read_file(filename=""):
         filename (str, file): [description]. Defaults to "".
     '''
     with open("my_file_0.txt", encoding="utf-8") as File:
-        print(File.read())
+        for line in File:
+            print(line, end="")
