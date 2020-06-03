@@ -66,3 +66,17 @@ TypeError: list() takes at most 1 argument (2 given)
 >>> list = MyList([1, 2, 3, 4])
 >>> list.print_sorted()
 [1, 2, 3, 4]
+
+
+>>> list = MyList([])
+>>> list.print_sorted()
+[]
+
+
+>>> list = MyList(True)
+Traceback (most recent call last):
+...
+TypeError: 'bool' object is not iterable
+
+
+
