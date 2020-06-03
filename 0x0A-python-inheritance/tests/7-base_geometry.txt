@@ -46,3 +46,24 @@ TypeError: True must be an integer
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(True, False)
+Traceback (most recent call last):
+...
+TypeError: True must be an integer
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("holis", -1)
+Traceback (most recent call last):
+...
+ValueError: holis must be greater than 0
+
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator('holis', None)
+Traceback (most recent call last):
+...
+TypeError: holis must be an integer
