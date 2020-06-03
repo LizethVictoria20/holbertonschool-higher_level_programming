@@ -6,6 +6,8 @@ Using ``prints list``
 
 
 >>> MyList = __import__('1-my_list').MyList
+
+
 >>> list = MyList()
 >>> my_list = MyList()
 >>> my_list.append(1)
@@ -15,6 +17,17 @@ Using ``prints list``
 >>> my_list.append(5)
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
+
+
+>>> list = MyList()
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(-3)
+>>> my_list.append(5)
+>>> my_list.print_sorted()
+[-3, -1, 2, 4, 5]
 
 
 
@@ -53,6 +66,13 @@ TypeError: list() takes at most 1 argument (2 given)
 [1, 2, 4, 6]
 
 
+>>> print(list)
+[1, 6, 2, 4]
+
+>>> list.print_sorted()
+[1, 2, 4, 6]
+
+
 >>> list = MyList(["B", "A"])
 >>> list.print_sorted()
 ['A', 'B']
@@ -77,6 +97,3 @@ TypeError: list() takes at most 1 argument (2 given)
 Traceback (most recent call last):
 ...
 TypeError: 'bool' object is not iterable
-
-
-
