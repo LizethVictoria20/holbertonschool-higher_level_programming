@@ -34,6 +34,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 
+
 >>> bg = BaseGeometry()
 >>> bg.integer_validator(True, False)
 Traceback (most recent call last):
@@ -94,3 +95,9 @@ NameError: name '__dict__' is not defined
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("ds", {1})
+Traceback (most recent call last):
+...
+TypeError: ds must be an integer
