@@ -92,3 +92,11 @@ class Rectangle(Base):
             [int]: [description]
         '''
         return self.__width * self.__height
+
+    def display(self):
+        '''[display]
+        '''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print()
