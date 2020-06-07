@@ -96,7 +96,38 @@ class Rectangle(Base):
     def display(self):
         '''[display]
         '''
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
+        row = self.height
+        column = self.width
+        for i in range(self.__y):
             print()
+        for j in range(row):
+            print(" " * self.__x, end="")
+            print("#" * column)
+
+    def __str__(self):
+        '''[__str__]
+        '''
+        varRec = "[Rectangle] ({}) {}/{} - {}/{}"
+        return varRec.format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        '''[update]
+        '''        
+        if len(args) > 0:
+            for i, arg in enumerate(args): #Falta igualar al id
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.width = arg
+                if i == 2:
+                    self.height = arg
+                if i == 3:
+                    self.x = arg
+                if i == 4:
+                    self.y = arg
+
+
+#x son espacios
+#y son saltos de linea 
+
+
