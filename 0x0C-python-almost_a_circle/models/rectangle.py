@@ -110,7 +110,7 @@ class Rectangle(Base):
         varRec = "[Rectangle] ({}) {}/{} - {}/{}"
         return varRec.format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''[update]
         '''        
         if len(args) > 0:
@@ -126,6 +126,18 @@ class Rectangle(Base):
                 if i == 4:
                     self.y = arg
 
+        if len(kwargs) > 0:
+            for key, value in kwargs.items(): #Falta igualar al id
+                if key == 'id':
+                    self.id = value
+                if key == 'width':
+                    self.width = value
+                if key == 'height':
+                    self.height = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
 
 #x son espacios
 #y son saltos de linea 
