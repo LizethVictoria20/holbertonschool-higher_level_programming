@@ -112,9 +112,9 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''[update]
-        '''        
+        '''
         if len(args) > 0:
-            for i, arg in enumerate(args): #Falta igualar al id
+            for i, arg in enumerate(args):
                 if i == 0:
                     self.id = arg
                 if i == 1:
@@ -127,7 +127,7 @@ class Rectangle(Base):
                     self.y = arg
 
         if len(kwargs) > 0:
-            for key, value in kwargs.items(): #Falta igualar al id
+            for key, value in kwargs.items():
                 if key == 'id':
                     self.id = value
                 if key == 'width':
@@ -138,8 +138,3 @@ class Rectangle(Base):
                     self.x = value
                 if key == 'y':
                     self.y = value
-
-#x son espacios
-#y son saltos de linea 
-
-
