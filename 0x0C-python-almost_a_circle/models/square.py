@@ -19,7 +19,7 @@ class Square(Rectangle):
         '''[__str__]
         '''
         varStr = "[Square] ({}) {}/{} - {}"
-        return varStr.format(self.id, self.x, self.y, self.width)
+        return varStr.format(self.id, self.x, self.y, self.size)
 
     @property
     def size(self):
@@ -29,5 +29,32 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, size):
+        '''[size]
+        '''
         self.width = size
         self.height = size
+
+    def update(self, *args, **kwargs):
+        '''[update]
+        '''
+        if len(args) > 0:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.size = arg
+                if i == 2:
+                    self.x = arg
+                if i == 3:
+                    self.y = arg
+
+        if len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
+                if key == 'id':
+                    self.id = value
+                if key == 'size':
+                    self.size = value
