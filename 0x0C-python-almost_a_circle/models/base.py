@@ -40,3 +40,13 @@ class Base:
                 new.append(cls.to_dictionary(i))
             with open("{}.json".format(cls.__name__), mode='w') as f:
                 f.write(cls.to_json_string(new))
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''[from json string]
+        '''
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
+    
