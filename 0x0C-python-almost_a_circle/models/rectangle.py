@@ -138,3 +138,10 @@ class Rectangle(Base):
                     self.x = value
                 if key == 'y':
                     self.y = value
+
+    def to_dictionary(self):
+        '''[to dictionary]
+        '''
+        w, h, i, x, y = self.width, self.height, self.id, self.x, self.y
+        lista = {'width': w, 'height': h, 'id': i, 'x': x, 'y': y}
+        return lista
