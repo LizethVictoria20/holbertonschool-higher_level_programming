@@ -38,7 +38,8 @@ class Base:
         if list_objs is not None:
             for i in list_objs:
                 new.append(cls.to_dictionary(i))
-            with open("{}.json".format(cls.__name__), mode='w') as f:
+            Str = "{}.json".format(cls.__name__),
+            with open(Str, mode='w', encoding='utf-8') as f:
                 f.write(cls.to_json_string(new))
 
     @staticmethod
@@ -60,3 +61,18 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        '''Class Method that returns a list of instances'''
+        new_list = []
+        try:
+            varStr = "{}.json".format(cls.__name__)
+            with open(varStr, mode='r') as f:
+                new = cls.from_json_string(f.read())
+        except IOError:
+            return []
+
+        for i in new:
+            new_list.append(cls.create(**i))
+        return new_list
