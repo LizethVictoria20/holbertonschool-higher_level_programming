@@ -115,7 +115,6 @@ class Rectangle(Base):
         '''
         if len(args) > 0:
             for i, arg in enumerate(args):
-                print(i)
                 if i == 0:
                     self.id = arg
                 if i == 1:
