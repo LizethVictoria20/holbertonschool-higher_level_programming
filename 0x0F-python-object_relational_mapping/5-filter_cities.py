@@ -20,7 +20,9 @@ if __name__ == "__main__":
     ORDER BY cities.id ASC""".format(stateName))
 
     rows = cursor.fetchone()
+    rowState = []
 
     while(rows):
-        print(rows)
+        rowState.append(rows[0])
         rows = cursor.fetchone()
+    print(', '.join(rowState))
