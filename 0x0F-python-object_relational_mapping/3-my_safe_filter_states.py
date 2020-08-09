@@ -15,8 +15,8 @@ if __name__ == "__main__":
         user=username, passwd=password, db=namedb)
 
     cursor = db.cursor()
-    cursor.execute("""SELECT * FROM states WHERE BINARY name='{:s}'
-    ORDER BY id ASC""".format(nameSearched))
+    cursor.execute("""SELECT * FROM states  WHERE name = %(searched)s
+    ORDER BY id ASC""", {'searched': nameSearched})
 
     emptyList = cursor.fetchall()
 
