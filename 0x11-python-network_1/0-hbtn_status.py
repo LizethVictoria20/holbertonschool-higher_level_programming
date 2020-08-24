@@ -6,8 +6,8 @@ if __name__ == "__main__":
     req = urllib.request.Request('https://intranet.hbtn.io/status')
 
     with urllib.request.urlopen(req) as response:
-        the_page = response.read()
+        value_headers = response.read()
         print('Body response:')
-        print('\t - type: {}'.format(type(the_page)))
-        print('\t - content: {}'.format(the_page))
-        print('\t - utf8 content: {}'.format(the_page.decode('utf-8')))
+        print('\t - type: {}'.format(type(value_headers)))
+        print('\t - content: {}'.format(value_headers))
+        print('\t - utf8 content: {}'.format(value_headers.decode('utf-8')))
