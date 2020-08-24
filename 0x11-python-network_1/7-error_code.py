@@ -11,4 +11,4 @@ if __name__ == "__main__":
         response.raise_for_status()
         print(response.text)
     except requests.HTTPError as error:
-        print("Error code: {}".format(error.status_code))
+        print("Error code: {}".format(response.status_code))
