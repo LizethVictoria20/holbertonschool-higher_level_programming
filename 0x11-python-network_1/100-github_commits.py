@@ -7,12 +7,12 @@ if __name__ == "__main__":
     """[Function initial]"""
     repo = sys.argv[1]
     owner = sys.argv[2]
-    url = "https://api.github.com/repos/{}/{}/commits".format(repo, owner)
+    url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
     result = requests.get(url)
     try:
         d = result.json()
         for i in range(10):
-            sha = d[0]["sha"]
-            print("{}: {}".format(sha, d[1]["commit"]["author"]["name"]))
-    except KeyError:
+            print("{}: {}".format(d[i]["sha"],
+                                  d[i]["commit"]["author"]["name"]))
+    except IndexError:
         pass
