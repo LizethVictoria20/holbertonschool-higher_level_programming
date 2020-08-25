@@ -10,9 +10,9 @@ if __name__ == "__main__":
     url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
     result = requests.get(url)
     try:
-        d = result.json()
+        values = result.json()
         for i in range(10):
-            print("{}: {}".format(d[i]["sha"],
-                                  d[i]["commit"]["author"]["name"]))
+            print("{}: {}".format(values[i]["sha"],
+                                  values[i]["commit"]["author"]["name"]))
     except IndexError:
         pass
