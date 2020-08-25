@@ -12,7 +12,6 @@ if __name__ == "__main__":
     request = requests.get(url, params=value_param, auth=(username, password))
 
     value_json = request.json()
-    print(value_json)
     try:
         print(value_json['id'])
     except KeyError:
