@@ -1,5 +1,5 @@
-#!/usr/local/bin/node
-function add (a, b) {
+#!/usr/bin/node
+function add(a, b) {
   const myArgs = process.argv[2];
   const num = parseInt(myArgs);
 
