@@ -14,9 +14,8 @@ function callback (error, response, body) {
     let count = 0;
     for (let i = 0; i < info.results.length; i++) {
       const allcharacters = info.results[i].characters;
-      const url = 'https://swapi-api.hbtn.io/api/people/18/';
       for (let j = 0; j < allcharacters.length; j++) {
-        if (url == allcharacters[j]) {
+        if (allcharacters[j].includes('18')) {
           count += 1;
         }
       }
