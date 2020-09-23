@@ -9,7 +9,7 @@ const options = {
   }
 };
 
-function callback(error, response, body) {
+function callback (error, response, body) {
   if (!error && response.statusCode === 200) {
     fs.writeFile(process.argv[3], body, 'utf-8', (err) => {
       if (err) {
