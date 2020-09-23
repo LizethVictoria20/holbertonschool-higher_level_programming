@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 const request = require('request');
 const fs = require('fs');
 const url = process.argv[2];
@@ -10,7 +10,7 @@ const options = {
   }
 };
 
-function callback(error, response, body) {
+function callback (error, response, body) {
   if (!error && response.statusCode === 200) {
     fs.writeFile(process.argv[3], body, 'utf-8', (err) => {
       if (err) {
