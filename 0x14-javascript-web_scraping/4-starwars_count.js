@@ -11,11 +11,6 @@ const options = {
 function callback (error, response, body) {
   if (!error && response.statusCode === 200) {
     const info = JSON.parse(body);
-    // const url = 'https://swapi-api.hbtn.io/api/people/18/';
-    // let count = 0;
-    // if (info.characters === url) {
-    // count += 1
-    // }
     let count = 0;
     for (let i = 0; i < info.results.length; i++) {
       const allcharacters = info.results[i].characters;
