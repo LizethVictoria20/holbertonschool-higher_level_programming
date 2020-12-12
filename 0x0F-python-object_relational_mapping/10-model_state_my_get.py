@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Get a state"""
+"""Get a state..."""
 
 from sqlalchemy import (create_engine)
 import sys
