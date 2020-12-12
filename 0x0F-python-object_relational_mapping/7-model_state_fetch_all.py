@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""All states via SQLAlchemy"""
+"""All states via SQLAlchemy..."""
 
 from sqlalchemy import (create_engine)
 import sys
