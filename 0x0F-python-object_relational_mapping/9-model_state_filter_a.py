@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Contains `a` """
+"""Contains `a` ..."""
 
 from sqlalchemy import (create_engine)
 import sys
