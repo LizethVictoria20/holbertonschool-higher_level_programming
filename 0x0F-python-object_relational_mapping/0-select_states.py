@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Get all states"""
+"""Get all states..."""
 
 import MySQLdb
 import sys
