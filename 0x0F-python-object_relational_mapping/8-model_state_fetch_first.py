@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""First state"""
+"""First state..."""
 
 from sqlalchemy import (create_engine)
 import sys
