@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Delete states"""
+"""Delete states..."""
 
 from sqlalchemy import (create_engine)
 import sys
